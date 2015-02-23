@@ -1,6 +1,6 @@
 {
   "name": "module-resolve",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "try to find an installed module",
   "main": "index.js",
   "scripts": {
