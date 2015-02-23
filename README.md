@@ -10,6 +10,7 @@ use the **require.resolve** to look up the location of a module but return **tru
 `var resolve = require('module-resolve')`
 
 **resolve(*module:string*)**
+*   module - can be the name of the module or the path
 
 ## Usage
 
