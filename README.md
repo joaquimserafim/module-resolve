@@ -22,6 +22,7 @@ var resolve = require('module-resolve')
 
 resolve('express')// should return true
 resolve('qs')// should return false
+resolve('./node_modules/express/node_modules/qs')// should return true
 
 ```
 
