@@ -10,7 +10,12 @@ use the **require.resolve** to look up the location of a module but return **tru
 ## API
 `var resolve = require('module-resolve')`
 
-**resolve(*module:string*)**
+**resolve(*module:string*)** - verify module is installed
+
+*   module - can be the name of the module or the path
+
+**resolse.load(*module:string*)** - require/load the module
+
 *   module - can be the name of the module or the path
 
 ## Usage
@@ -20,9 +25,16 @@ var resolve = require('module-resolve')
 
 // `npm i express`
 
-resolve('express')// should return true
-resolve('qs')// should return false
-resolve('./node_modules/express/node_modules/qs')// should return true
+// should return true
+resolve('express')
+// should return false
+resolve('qs')
+// should return true
+resolve('./node_modules/express/node_modules/qs')
+
+// the same as `var express = require('express')`
+// instead throwing an error returns "undefined" if module is not installed
+var express = resolve.load('express')
 
 ```
 
